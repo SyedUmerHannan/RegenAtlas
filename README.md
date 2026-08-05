@@ -40,34 +40,27 @@ RegenAtlas integrates datasets across multiple species spanning regenerative and
 
 ## 🏗️ Technical Pipeline & Modules
 
-┌──────────────────────────────┐
-│  Module I: Data Aggregation  │
-└──────────────┬───────────────┘
-│
-┌──────────────▼───────────────┐
-│ Module II: Cross-Species     │  ◄── SAMap, Ensembl Compara,
-│ Integration & Validation     │      Harmony / scVI
-└──────────────┬───────────────┘
-│
-┌──────────────▼───────────────┐
-│ Module III: Trajectory &     │  ◄── Cell-Cycle Scoring, Pseudotime,
-│ Cell-State Analysis          │      Sarcomere Disassembly
-└──────────────┬───────────────┘
-│
-┌──────────────▼───────────────┐
-│ Module IV: Regulatory        │  ◄── pySCENIC Regulon Inference,
-│ Network Comparison           │      scATAC Cross-Checking
-└──────────────┬───────────────┘
-│
-┌──────────────▼───────────────┐
-│ Module V: Candidate          │  ◄── Scoring (Consistency, Evidence,
-│ Prioritization Triage        │      Druggability, Directionality)
-└──────────────┬───────────────┘
-│
-┌──────────────▼───────────────┐
-│ Module VI: Boolean Model     │  ◄── Optional qualitative logic
-│ (Stretch Goal)               │      consistency check
-└──────────────────────────────┘
+flowchart TD
+    M1["**Module I: Data Aggregation**"] 
+    M2["**Module II: Cross-Species Integration & Validation**"] 
+    M3["**Module III: Trajectory & Cell-State Analysis**"] 
+    M4["**Module IV: Regulatory Network Comparison**"] 
+    M5["**Module V: Candidate Prioritization Triage**"] 
+    M6["**Module VI: Boolean Model (Stretch Goal)**"]
+
+    T2["SAMap, Ensembl Compara, Harmony / scVI"]
+    T3["Cell-Cycle Scoring, Pseudotime, Sarcomere Disassembly"]
+    T4["pySCENIC Regulon Inference, scATAC Cross-Checking"]
+    T5["Scoring (Consistency, Evidence, Druggability, Directionality)"]
+    T6["Optional qualitative logic consistency check"]
+
+    M1 --> M2 --> M3 --> M4 --> M5 --> M6
+
+    T2 -.-> M2
+    T3 -.-> M3
+    T4 -.-> M4
+    T5 -.-> M5
+    T6 -.-> M6
 
 
 1. **Module I - Data Aggregation**: Per-species independent QC, standard filtering (genes/cell, mitochondrial %, doublets), and metadata harmonization[cite: 1].
