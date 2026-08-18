@@ -1,16 +1,16 @@
 # RegenAtlas: Cross-Species Mining of Cardiac Regeneration Programs
 
-**Cross-species mining of cardiac regeneration programs from public single-cell data[cite: 1].**
+**Cross-species mining of cardiac regeneration programs from public single-cell data.**
 
 ---
 
 ## 📌 Project Overview
 
-**RegenAtlas** leverages existing public single-cell and single-nucleus RNA-sequencing (sc/snRNA-seq) datasets from regeneration-competent and regeneration-incompetent hearts[cite: 1]. The goal is to identify a prioritized, defensible hypothesis list of conserved regulatory programs that gate cardiomyocyte (CM) proliferation across species for wet-lab validation[cite: 1].
+**RegenAtlas** leverages existing public single-cell and single-nucleus RNA-sequencing (sc/snRNA-seq) datasets from regeneration-competent and regeneration-incompetent hearts. The goal is to identify a prioritized, defensible hypothesis list of conserved regulatory programs that gate cardiomyocyte (CM) proliferation across species for wet-lab validation.
 
-Rather than searching for a single master switch, this project tests the hypothesis that the regenerative phenotype consists of a small set of convergent programs—such as cell-cycle re-entry, sarcomere disassembly, dedifferentiation TFs, and a permissive metabolic state—that are lost in a specific, identifiable order as regenerative competence closes[cite: 1].
+Rather than searching for a single master switch, this project tests the hypothesis that the regenerative phenotype consists of a small set of convergent programs—such as cell-cycle re-entry, sarcomere disassembly, dedifferentiation TFs, and a permissive metabolic state—that are lost in a specific, identifiable order as regenerative competence closes.
 
-> **Disclaimer & Framing:** This repository produces a prioritized triage list for wet-lab follow-up; it is a hypothesis generator rather than an independent mechanistic proof or discovery claim[cite: 1].
+> **Disclaimer & Framing:** This repository produces a prioritized triage list for wet-lab follow-up; it is a hypothesis generator rather than an independent mechanistic proof or discovery claim.
 
 ---
 
@@ -63,37 +63,37 @@ flowchart TD
     T6 -.-> M6
 
 
-1. **Module I - Data Aggregation**: Per-species independent QC, standard filtering (genes/cell, mitochondrial %, doublets), and metadata harmonization[cite: 1].
+1. **Module I - Data Aggregation**: Per-species independent QC, standard filtering (genes/cell, mitochondrial %, doublets), and metadata harmonization.
 2. **Module II - Cross-Species Integration**:
-   * Baseline ortholog mapping using Ensembl Compara (1-to-1, 1-to-many, many-to-many)[cite: 1].
-   * Within-species harmonization using `Harmony` or `scVI`[cite: 1].
-   * Cross-species graph-based mapping using `SAMap`[cite: 1].
-   * Validation of integration using conserved cell markers (`TNNT2`, `MYH6/7`, `PECAM1`, `COL1A1`)[cite: 1].
-3. **Module III - Trajectory & Cell-State Analysis**:
-   * Cell-cycle scoring and sarcomere disassembly signature tracking[cite: 1].
-   * Pseudotime trajectory inference (e.g., `Monocle3`, `Slingshot`, or `scVelo`) along injury-response axes[cite: 1].
-   * Differential expression between matched timepoints across regenerative boundaries[cite: 1].
+   * Baseline ortholog mapping using Ensembl Compara (1-to-1, 1-to-many, many-to-many).
+   * Within-species harmonization using `Harmony` or `scVI`.
+   * Cross-species graph-based mapping using `SAMap`.
+   * Validation of integration using conserved cell markers (`TNNT2`, `MYH6/7`, `PECAM1`, `COL1A1`).
+3. **Module III - Trajectory & Cell-State Analysis**
+   * Cell-cycle scoring and sarcomere disassembly signature tracking.
+   * Pseudotime trajectory inference (e.g., `Monocle3`, `Slingshot`, or `scVelo`) along injury-response axes.
+   * Differential expression between matched timepoints across regenerative boundaries.
 4. **Module IV - Regulatory Network Comparison**:
-   * Transcription factor regulon inference using `pySCENIC`[cite: 1].
-   * Integration with matched mouse scATAC-seq data[cite: 1].
-   * Pipeline sanity checks against known literature regulators (e.g., Hippo/YAP, Meis1, Tbx20, Nrg1/ErbB4, Cyclin D2)[cite: 1].
+   * Transcription factor regulon inference using `pySCENIC`.
+   * Integration with matched mouse scATAC-seq data.
+   * Pipeline sanity checks against known literature regulators (e.g., Hippo/YAP, Meis1, Tbx20, Nrg1/ErbB4, Cyclin D2).
 5. **Module V - Candidate Prioritization**:
    * Multi-factorial scoring system based on:
-     1. Cross-species consistency[cite: 1].
-     2. Literature perturbation evidence[cite: 1].
-     3. Druggability and clinical tractability[cite: 1].
-     4. Direction-of-effect consistency across species[cite: 1].
+     1. Cross-species consistency.
+     2. Literature perturbation evidence.
+     3. Druggability and clinical tractability.
+     4. Direction-of-effect consistency across species.
 6. **Module VI - Boolean Logic Model (Optional Stretch Goal)**:
-   * Qualitative dynamic modeling of top 5–10 regulators via `BoolNet` or `PyBoolNet` to confirm internal logic consistency[cite: 1].
+   * Qualitative dynamic modeling of top 5–10 regulators via `BoolNet` or `PyBoolNet` to confirm internal logic consistency.
 
 ---
 
 ## 🛠️ Tooling & Tech Stack
 
-* **Python**: `Scanpy`, `scVI`, `SAMap`, `pySCENIC`, `scVelo`[cite: 1].
-* **R**: `Seurat`, `Harmony`, `Monocle3`, `Slingshot`, `BoolNet`[cite: 1].
-* **Reference Databases**: Ensembl Compara, cisTarget motif databases[cite: 1].
-* **Compute Environment**: High-performance computing cluster / High-memory cloud resources[cite: 1].
+* **Python**: `Scanpy`, `scVI`, `SAMap`, `pySCENIC`, `scVelo`.
+* **R**: `Seurat`, `Harmony`, `Monocle3`, `Slingshot`, `BoolNet`.
+* **Reference Databases**: Ensembl Compara, cisTarget motif databases.
+* **Compute Environment**: High-performance computing cluster / High-memory cloud resources.
 
 ---
 
@@ -116,7 +116,7 @@ flowchart TD
 | **Month 4–6** | Module IV | `pySCENIC` regulon inference per dataset and cross-species TF matrix assembly[cite: 1]. |
 | **Month 6–9** | Module V | Scoring framework execution and ranked candidate table generation[cite: 1]. |
 | **Month 9–10** | Module VI | *(Optional)* Boolean dynamic model construction[cite: 1]. |
-| **Month 10–12**| Finalization | Manuscript preparation, code documentation, and collaborator sanity-checks[cite: 1]. |
+| **Month 10–12**| Finalization | Manuscript preparation, code documentation, and collaborator sanity-checks. |
 
 ---
 
