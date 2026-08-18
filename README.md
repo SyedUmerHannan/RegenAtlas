@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 **RegenAtlas** leverages existing public single-cell and single-nucleus RNA-sequencing (sc/snRNA-seq) datasets from regeneration-competent and regeneration-incompetent hearts. The goal is to identify a prioritized, defensible hypothesis list of conserved regulatory programs that gate cardiomyocyte (CM) proliferation across species for wet-lab validation.
 
@@ -14,7 +14,7 @@ Rather than searching for a single master switch, this project tests the hypothe
 
 ---
 
-## 🔬 Target Species & Datasets (Module I)
+## Target Species & Datasets (Module I)
 
 RegenAtlas integrates datasets across multiple species spanning regenerative and non-regenerative boundaries[cite: 1]:
 
@@ -38,7 +38,7 @@ RegenAtlas integrates datasets across multiple species spanning regenerative and
 
 ---
 
-## 🏗️ Technical Pipeline & Modules
+## Technical Pipeline & Modules
 
 flowchart TD
     M1["**Module I: Data Aggregation**"] 
@@ -88,7 +88,7 @@ flowchart TD
 
 ---
 
-## 🛠️ Tooling & Tech Stack
+## Tooling & Tech Stack
 
 * **Python**: `Scanpy`, `scVI`, `SAMap`, `pySCENIC`, `scVelo`.
 * **R**: `Seurat`, `Harmony`, `Monocle3`, `Slingshot`, `BoolNet`.
@@ -97,7 +97,7 @@ flowchart TD
 
 ---
 
-## ⚠️ Known Limitations & Explicit Caveats
+## Known Limitations & Explicit Caveats
 
 * **Association vs. Causation**: Transcriptomic and regulon conservation points to hypotheses, not proven drivers of regeneration[cite: 1].
 * **Cross-Species Integration Artifacts**: Potential batch effects across technologies (10x vs. Smart-seq, snRNA vs. scRNA) and ortholog mapping ambiguities[cite: 1].
@@ -106,7 +106,7 @@ flowchart TD
 
 ---
 
-## 📅 Milestones & Timeline
+## Milestones & Timeline
 
 | Timeline | Phase | Description |
 | :--- | :--- | :--- |
@@ -119,13 +119,3 @@ flowchart TD
 | **Month 10–12**| Finalization | Manuscript preparation, code documentation, and collaborator sanity-checks. |
 
 ---
-
-## 📚 Key References
-
-* **Cui et al. 2020** (*Dev Cell* / *Cell Rep*): Murine neonatal CM single-nucleus RNA-seq & scATAC-seq datasets (`GSE130699`)[cite: 1].
-* **Litviňuková et al. 2020** (*Nature*): Adult Human Heart Cell Atlas (`ERP123138`)[cite: 1].
-* **Koenig et al. 2022** (*Nat Cardiovasc Res*): Human heart failure single-cell atlas[cite: 1].
-* **Tarashansky et al. 2021** (*eLife*): SAMap cross-species single-cell atlas mapping[cite: 1].
-* **Luecken et al. 2023** (*Nat Commun*): Cross-species scRNA-seq integration benchmark[cite: 1].
-* **Aibar et al. 2017** (*Nat Methods*): SCENIC regulatory network inference[cite: 1].
-* **Porrello et al. 2011**: Neonatal mouse regenerative window[cite: 1].
